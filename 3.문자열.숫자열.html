@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열,숫자열</title>
+</head>
+<body>
+    <h1>문자열 =>텍스트 데이터</h1> 
+    ""큰따옴표,''작은따옴표
+    <strong>큰따옴표 작은따옴표 안에 있는 문자는 텍스트데이터로 인식</strong>
+    => 한글 공백 영어 숫자 특수기호
+    <br>
+    <strong>※변수 이름 지정할때 조심할 것 let "box" 입력할 경우 변수가 아닌 텍스트 데이터로 인식이 되어버림</strong>
+    <br>
+    <ul>
+        <li>더하기만 가능</li>
+        <li>다른 연산 시도시 NaN 반환</li>
+    </ul> 
+
+
+    <h1>숫자열</h1>
+    산술 연산자
+    + - * / % <!-- % 수를 나눴을때 나머지값을 돌려줌 --><br>
+    숫자 같은경우 사칙을 연산하게 되어 문자열이라도 숫자가 계산이 되지만 abc 같은 문자는 계산이 불가능 하여 NaN값 출력
+    <br>
+    <li>모든 연산이 가능</li>
+    <li>문자와 혼합 연산시 NaN 반환(더하기는 제외)</li>
+
+    <h2>예외 상황</h2>
+    'abc' * 5 => NaN
+    <br>
+    '100' * 5 => 500
+    
+
+
+   <script>
+    /* 문자열 */
+    console.log('Hello' + 'world')
+    //문자열은 +연산 이외에 - * / 빼기 곱하기 나누기 안됨
+
+    /* 숫자열 */
+    console.log(1 + 2)
+    console.log(3 - 1)
+    console.log(10 / 2)
+    console.log('a' + 4) //문자열 + 숫자열
+    console.log('1' + 1) //문자열1 + 숫자열 1 = 11
+    console.log(1 +'')
+    console.log('a'*1) // Not a Number = NaN 문자열과 같은 타입을 연산에 적용 시도하였을때
+    console.log('2' * 2) 
+   </script>
+</body>
+</html>

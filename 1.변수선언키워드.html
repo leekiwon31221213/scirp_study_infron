@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수선언 키워드</title>
+</head>
+<body>
+    <!-- 변수 선언 키워드
+    let 재(중복)선언이 불가능 재할당 가능
+    var 재할당.재선언 가능
+    const 상수 변수 재할당.재선언 불가능 
+    -->
+
+    = 할당의 의미 같다X
+    <br>
+    재할당 => 이미 데이터가 할당되어 있는 변수에 다시 할당
+    <br>
+    재선언 => 이미 선언되어 있는 변수명으로 다시 선언
+    <br>
+    변수명은 동사가 아닌 명사로 사용할것 
+    첫 글자는 숫자X
+    
+
+    <script>
+    /* let 재할당 */
+    let box;
+    box = 1;
+    console.log(box)
+    box = 5;
+    console.log(box)
+
+    /* var */
+    var uniqueWord ='unique';
+    var uniqueWord ='ununiqueWord';
+    console.log(uniqueWord)
+
+
+    /* const */
+    const word = 'abc';
+    console.log(word)
+    </script>
+</body>
+</html>

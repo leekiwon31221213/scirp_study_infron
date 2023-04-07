@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문과 논리연산자</title>
+
+    <script></script>
+  </head>
+
+  <body>
+    <h1>조건문</h1>
+    <ul>
+      <li>run code(true)</li>
+      <li>skip code(false)</li>
+    </ul>
+    <hr />
+    if(true){
+    <p>조건이 성립하면 실행되는 코드 작성</p>
+    }
+    <p>만약~라면 실행됨</p>
+    <hr />
+    <p>if(){</p>
+    <p>} else{</p>
+    <p>}</p>
+    <p>if가 아니라면 else 출력</p>
+    <hr />
+    if(){
+    <p>console.log()</p>
+    }else if(){
+    <p>console.log()</p>
+    }else{
+    <p>console.log()</p>
+    }
+    <p>
+      만약~if가 아니라면 else if문을 확인하고 else if도 아니면 else출력 else
+      if가 맞다면 else if 출력
+    </p>
+    <hr />
+    <h1>논리연산자</h1>
+    <ul>
+      <li>&& AND 연산자 => 양쪽에 위치한 조건을 모두 만족하는 경우 true</li>
+      name === 'Jason'&& age > 25
+      <li>
+        || OR 연산자 => 양쪽에 위치한 조건 중, 하나라도 만족하는 경우 true
+      </li>
+      name==='Jason'||name==='Peter'
+    </ul>
+
+    <script>
+      let name = "jason";
+      if (name === "jason") {
+        console.log("hi,jason");
+      }
+
+      /* 조건식이 맞지 않아 출력이 되지 않음 */
+      let name2 = "peter";
+      if (name2 === "jason") {
+        console.log("조건문 통과");
+      }
+
+      const obj = {
+        name: "Peter",
+        age: 25,
+      };
+      if (obj.name === "jason") {
+        //console.log("안녕,jason!");
+        console.log("안녕" + obj.name);
+      } else if (obj.name === "Peter") {
+        console.log("안녕" + obj.name);
+      } else {
+        console.log("넌 우리 멤버가 아니야");
+      }
+    </script>
+  </body>
+</html>

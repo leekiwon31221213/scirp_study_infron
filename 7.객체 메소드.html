@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.객체 메소드</title>
+</head>
+<body>
+  <h1>Object.keys()</h1>
+  주어진 객체의 key만을 가져와 배열에 담아주는 메서드 <br>
+  <strong>Object.keys(변수이름)</strong>
+ 
+
+  <h1>Object.values()</h2>
+    주어진 객체의 value만을 가져와 배열에 담아주는 메서드 <br>
+    <strong>Object.keys(변수이름)</strong>
+
+   <script>
+ const jasonData = {
+  name:"Jason",
+  age:25,
+  gender:"Male",
+  email:"제이슨@test.com"
+  }
+
+  //Object.keys
+  console.log(Object.keys(jasonData))
+
+  let result = Object.keys(jasonData)
+  console.log(result)
+
+  console.log(result.includes("email"))
+ 
+
+  //Object.values()
+  console.log(Object.values(jasonData))
+
+  /* Dot notation */
+  jasonData.favoriteFood = ["rice", "noodle" ,"chicken"]
+  console.log(jasonData)
+   </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.객체 Property</title>
+</head>
+<body>
+  <h1>객체(Object)</h1>
+  =>객체는 여러개의 Property(프로퍼티)를 갖는 데이터 타입
+  <h2>{name(key):'제이슨(value)'}</h2>
+  key와 벨류가 만나 하나의 프로퍼티가 됨
+
+  <h2>데이터 객체에 접근하는방법</h2>
+  <ul>
+    <li>Dot notation</li>
+    점을 사용하는 접근방법
+    
+    <li>Bracket notation</li>
+  </ul>
+
+   <script>
+    
+    const jasonData = {
+
+      name:"Jason",
+      age:25,
+      gender:"Male",
+      email:"제이슨@test.com"
+    }
+    console.log(jasonData)
+
+    /* Dot notation */
+    console.log(jasonData.email)
+
+    /* Bracket notation */
+    console.log(jasonData["age"])
+    //브라켓 노테이션은 [] 대괄호안에 무조건 "",''문자열로 기입할것
+
+    let name ="age"
+    console.log(jasonData[name])
+    //jasonData[name]은 문자열이 아닌 변수 "age"로 동작되기 때문에 25로 출력
+
+   </script>
+</body>
+</html>
