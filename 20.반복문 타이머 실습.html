@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #e2e2e285;
+        overflow-x: hidden;
+      }
+
+      hr {
+        border: 1px solid #333;
+        width: 100%;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      input {
+        width: 50px;
+      }
+
+      .btn1 {
+        margin: 25px 0;
+        width: 115px;
+      }
+
+      .btn1,
+      .btn2 {
+        height: 30px;
+        font-size: 11px;
+        background-color: royalblue;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      .btn:hover {
+        color: #333;
+        font-weight: bolder;
+        transition: 0.4s;
+      }
+
+      #d_day_container {
+        display: flex;
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>반복문</h1>
+    반복적인 코드의 양을 획기적으로 압축
+    <hr />
+    <h1>D-Day</h1>
+
+    <div id="d_day_container">
+      <div class="d_day_child_container">
+        <span id="days">0</span>
+        <span>일</span>
+      </div>
+
+      <div class="d_day_child_container">
+        <span id="hours">0</span>
+        <span>시간</span>
+      </div>
+
+      <div class="d_day_child_container">
+        <span id="min">0</span>
+        <span>분</span>
+      </div>
+
+      <div class="d_day_child_container">
+        <span id="sec">0</span>
+        <span>초</span>
+      </div>
+    </div>
+    <div id="d-day-message"></div>
+
+    <div id="target_selector">
+      <input type="text" id="target-year-input" class="target-input" /> -
+      <input type="text" id="target-month-input" class="target-input" /> -
+      <input type="text" id="target-date-input" class="target-input" />
+    </div>
+
+    <button onclick="counterMaker()" id="start_btn" class="btn1 btn">
+      카운트다운 시작
+    </button>
+    <button onclick="" class="btn2 btn">타이머 초기화</button>
+    <script src="js/20.js"></script>
+  </body>
+</html>

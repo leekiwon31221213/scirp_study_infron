@@ -51,24 +51,21 @@
     <script>
       let name = "jason";
       if (name === "jason") {
-        console.log("hi,jason");
+        //console.log("hi,jason");
       }
 
       /* 조건식이 맞지 않아 출력이 되지 않음 */
       let name2 = "peter";
       if (name2 === "jason") {
-        console.log("조건문 통과");
+        //console.log("조건문 통과");
       }
 
       const obj = {
-        name: "Peter",
+        name: "jason",
         age: 25,
       };
-      if (obj.name === "jason") {
-        //console.log("안녕,jason!");
-        console.log("안녕" + obj.name);
-      } else if (obj.name === "Peter") {
-        console.log("안녕" + obj.name);
+      if (obj.name === "jason" && obj.age >= 25) {
+        console.log("안녕," + obj.name + ",너의 나이는" + obj.age);
       } else {
         console.log("넌 우리 멤버가 아니야");
       }

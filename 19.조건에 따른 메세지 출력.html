@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건에 따른 메세지 출력</title>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #e2e2e285;
+        overflow-x: hidden;
+      }
+
+      hr {
+        border: 1px solid #333;
+        width: 100%;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      input {
+        width: 50px;
+      }
+
+      .btn1 {
+        margin: 25px 0;
+        width: 115px;
+      }
+
+      .btn1,
+      .btn2 {
+        height: 30px;
+        font-size: 11px;
+        background-color: royalblue;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      .btn:hover {
+        color: #333;
+        font-weight: bolder;
+        transition: 0.4s;
+      }
+    </style>
+    <script>
+        //비교연산자 예시
+        //console.log('1 === 1' , 1 === 1);
+        //console.log(' 1 > 2', 1 > 2);
+        const check = 'check';
+        //console.log("check === 'check'" , check === 'check' );
+        //console.log('check === 123', check ===123);
+
+        //배열 비교연산자 예시
+        const arr =[1,2,3]
+        //console.log('arr === [1,2,3]' , arr ===[1,2,3]);
+    </script>
+  </head>
+
+  <body>
+    <h1>비교연산자</h1>
+    자바스크립트의 데이터를 서로비교
+    <strong>=== 서로 같은지 확인해주는 비교연산자</strong>
+    <ul>
+        <li>==느슨한비교</li>
+        <li>===엄격한비교</li>
+        느슨한 비교보다는 엄격한 비교를 사용하는것을 권장
+    </ul>
+    <h3>예시</h2>
+    "abc" === "abc" -> 같으면 ture 거짓이면 false
+    <hr />
+    <h1>D-Day</h1>
+    <div id="d_day_container">
+      <div class="d_day_child_container">
+        <span id="days">0</span>
+        <span>일</span>
+      </div>
+    </div>
+
+    <div class="d_day_child_container">
+      <span id="hours">0</span>
+      <span>시간</span>
+    </div>
+
+    <div class="d_day_child_container">
+      <span id="min">0</span>
+      <span>분</span>
+    </div>
+
+    <div class="d_day_child_container">
+      <span id="sec">0</span>
+      <span>초</span>
+    </div>
+
+    <div id="target_selector">
+      <input type="text" id="target-year-input" class="target-input" /> -
+      <input type="text" id="target-month-input" class="target-input" /> -
+      <input type="text" id="target-date-input" class="target-input" />
+    </div>
+
+    <button onclick="counterMaker()" id="start_btn" class="btn1 btn">
+      카운트다운 시작
+    </button>
+    <button onclick="" class="btn2 btn">타이머 초기화</button>
+
+    <script>
+      const dateFormMaker = function () {
+        const inputYear = document.querySelector("#target-year-input").value;
+        const inputMonth = document.querySelector("#target-month-input").value;
+        const inputDate = document.querySelector("#target-date-input").value;
+
+        //const dateFormat = inputYear +'-'+ inputMonth +'-'+ inputDate //지역변수
+        const dateFormat = `${inputYear}-${inputMonth}-${inputDate}`; //템플릿 리터럴
+        //백틱은 문자열 안에서 변수 창조가능
+
+        return dateFormat;
+        //console.log(inputYear, inputMonth , inputDate);
+      };
+
+      const counterMaker = function () {
+        const targetDateInput = dateFormMaker();
+        const nowDate = new Date();
+        const targetDate = new Date(targetDateInput).setHours(0, 0, 0, 0);
+        const remaining = (targetDate - nowDate) / 1000;
+        // 만약 remaining이 0이라면 타이머가 종료되었습니다 출력
+        /* console.log(isNaN(remaining), remaining); */
+        if(remaining <= 0 ){
+            console.log('타이머가 종료 되었습니다');
+        }else if(isNaN(remaining)){
+            console.log('유효한 시간대가 아닙니다.')
+        }
+        //만약 잘못된 날짜가 들어 왔다면 유효한 시간대가 아닙니다. 출력
+
+
+
+        
+
+        const remainingDate = Math.floor(remaining / 3600 / 24);
+        const remainingHours = Math.floor(remaining / 3600) % 24;
+        const remainingMin = Math.floor(remaining / 60) % 60; //분
+        const remainingSec = Math.floor(remaining) % 60; //초
+
+        //console.log(remainingDate, remainingHours, remainingMin, remainingSec);
+      }; 
+      //값을 가져올때는 .value를 꼭 입력해줘야함
+      //const remainingDate에 Math.floor()메서드는 소숫점 이하의 수를 내림해줌
+
+      /* 리턴 예시 스크립트 */
+      const sum = function () {
+        let result = 10 + 10;
+        return result;
+        console.log("함수종료");
+      };
+      sum();
+      
+    </script>
+  </body>
+</html>
